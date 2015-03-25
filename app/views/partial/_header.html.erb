@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kuwarto</title>
+  <link rel="stylesheet" type="text/css" href="/assets/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/assets/application.css">
+</head>
+<body>
+<div id="main-wrapper">
+  <div id="header">
+    <div class="head-wrapper">
+      <div class="brand-logo">
+        <%=link_to image_tag("logo.png", :border => 0), root_path %>
+      </div>
+      <div class="nav-wrapper">
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Featured", feature_path %></li>
+          <li><%= link_to "Promos", promo_path %></li>
+          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Contact Us", contact_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
