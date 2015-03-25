@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'signup', :to => 'users#new'
+
   get 'pages/index'
 
   get '/about', :to => 'pages#about'
@@ -7,7 +9,7 @@ Rails.application.routes.draw do
   get '/feature', :to => 'pages#featured'
   get '/promo', :to => 'pages#promos'
 
-  # resources :pages, :only => [:new, :create]
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
