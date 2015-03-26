@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   def index
   end
 
+  def show
+    @users = User.find(params[:id])
+  end
+
   def new
     @users = User.new
   end
@@ -11,6 +15,7 @@ class UsersController < ApplicationController
     if @users.save
       flash[:notice] = "You signed up successfully"
       flash[:color]= "valid"
+      redirect_to @user
     else
       flash[:notice] = "Form is invalid"
       flash[:color]= "invalid"

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'log_in', :to => 'sessions#new'
+  post 'log_in', :to => 'sessions#create'
+  delete 'log_out', :to =>'sessions#destroy'
+
   get 'signup', :to => 'users#new'
 
   get 'pages/index'
@@ -10,6 +14,7 @@ Rails.application.routes.draw do
   get '/promo', :to => 'pages#promos'
 
   resources :users
+  resources :sessions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
