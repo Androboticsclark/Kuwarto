@@ -1,17 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'log_in', :to => 'sessions#new'
-  post 'log_in', :to => 'sessions#create'
-  delete 'log_out', :to =>'sessions#destroy'
-
-  get 'signup', :to => 'users#new'
-
-  get 'pages/index'
-
   get '/about', :to => 'pages#about'
   get '/contact', :to => 'pages#contact'
   get '/feature', :to => 'pages#featured'
   get '/promo', :to => 'pages#promos'
+
+  get 'signup', :to => 'users#new'
+  get 'login', :to => 'sessions#new'
+  post 'login', :to => 'sessions#create'
+  get 'logout', :to => 'sessions#destroy'
 
   resources :users
   resources :sessions
