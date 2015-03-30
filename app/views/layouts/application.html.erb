@@ -1,22 +1,18 @@
 <%= render "partial/header.html.erb" %>
   <!-- End #HEADER -->
   <!-- Start #Content -->
-  <div id="content">
-    <div class="wrapper">
-      <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
-      <%= yield %>
+  <div id="main-container" class="container">
+    <div class="row">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
+        <%= yield %>
     </div>
   </div>
   <!-- Start #FOOTER -->
-  <div id="footer">
-    <div class="wrapper">
-      <p>
-        All Rights Reserved 2015 © Kuwarto.com
-      </p>
-    </div>
-  </div>
-</div>
+<%= render "partial/footer.html.erb" %>
+
+<script src="assets/jquery.js"></script>
+<script src="assets/bootstrap.js"></script>
 </body>
 </html>
