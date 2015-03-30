@@ -2,7 +2,7 @@
   <!-- End #HEADER -->
   <!-- Start #Content -->
   <div id="main-container" class="container">
-    <div class="row">
+    <div class="page-wrapper">
         <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>
         <% end %>
