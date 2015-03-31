@@ -2,9 +2,12 @@
 <html>
 <head>
   <title>Kuwarto</title>
+  <%= javascript_include_tag "default", "data-turbolinks-track" => true %>
   <link rel="stylesheet" type="text/css" href="/assets/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="/assets/application.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script src="/assets/jquery.js"></script>
+  <script src="/assets/bootstrap.js"></script>
 </head>
 <body>
 <nav class = "navbar navbar-default navbar-fixed-top">
@@ -17,7 +20,7 @@
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", about_path %></li>
 
-        <% if current_user.try(:admin?) && !current_user?(@user) %>
+        <% if current_user.try(:admin?) %>
         <li><%= link_to "Users", users_path %></li>
         <% end %>
 
