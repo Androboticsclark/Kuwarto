@@ -2,11 +2,15 @@
 
 .page-wrapper {
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 
-#main-container {
-  margin-bottom: 100px;
+#main-container img:hover
+{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 /*Front Page*/
@@ -41,6 +45,11 @@
   max-height: 330px;
   max-width: 330px;
   background-size: 100% 100%;
+  border: #000000 1px solid;
+}
+
+.featured-content .col-xs-4 > img:hover {
+  border: red 1px solid;
 }
 
 /*Partners-Wrapper*/
@@ -54,6 +63,26 @@
   text-align: center;
   width: 200px;
   height: 100px;
+  background-size: 100% 100%;
+}
+
+/*Connect Wrapper*/
+
+.connect-wrapper .row {
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  color: #FFFFFF;
+}
+
+.connect-wrapper .col-xs-3{
+  text-align: center;
+}
+
+.connect-wrapper .col-xs-3 > a > img {
+  text-align: center;
+  width: 50px;
+  height: 50px;
   background-size: 100% 100%;
 }
 
