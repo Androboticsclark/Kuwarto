@@ -1,0 +1,31 @@
+<h1>New Advertisement</h1>
+<%= form_for(@product) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'form-control' %>
+
+  <%= f.label :Description %>
+  <%= f.text_field :description, class: 'form-control' %>
+
+  <%= f.label :price %>
+  <%= f.text_field :price, class: 'form-control' %>
+
+  <%= f.label :city %>
+  <%= f.text_field :city, class: 'form-control' %>
+
+  <%= f.label :barangay %>
+  <%= f.text_field :barangay, class: 'form-control' %>
+
+  <%= f.label :bathrooms %>
+  <%= f.text_field :bathrooms, class: 'form-control' %>
+
+  <%= f.label :condition %>
+  <%= f.text_field :condition, class: 'form-control' %>
+
+  <%= f.label :area %>
+  <%= f.text_field :area, class: 'form-control' %>
+
+  <%= f.label :neighborhood %>
+  <%= f.text_field :neighborhood, class: 'form-control' %>
+
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
