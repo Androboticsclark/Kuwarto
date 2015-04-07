@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   before_action :logged_in_user, only: [:index, :new, :edit, :update, :destroy]
 
   def index
+    @products = Product.all
   end
 
   def show
@@ -12,10 +13,10 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
   def create
-    @product = Product.new(user_params)
+    @product = Product.new(product_params)
     if @product.save
       flash[:success] = 'Posted Successfully!'
-      redirect_to root_url
+      redirect_to products_url
     else
       render 'new'
     end
